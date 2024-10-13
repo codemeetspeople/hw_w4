@@ -24,6 +24,8 @@ class State {
         virtual int getManaLimit() const;
 
         virtual void takeDamage(int dmg);
+        virtual void addHP(int hp);
+
         virtual void spendMana(int cost);
 };
 

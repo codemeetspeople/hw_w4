@@ -43,6 +43,17 @@ void State::takeDamage(int dmg) {
     this->hp -= dmg;
 }
 
+void State::addHP(int hp) {
+    if ( this->getHP() == 0 ) {
+        throw HPException();
+    }
+    if ( (this->getHP() + hp) > this->getMaxHP() ) {
+        this->hp = this->getMaxHP();
+        return;
+    }
+    this->hp += hp;
+}
+
 void State::spendMana(int cost) {
     if ( cost > this->getMana() ) {
         throw ManaException();

@@ -19,6 +19,8 @@ class Unit {
         virtual int getDmg() const;
 
         virtual void takeDamage(int dmg);
+        virtual void takeMagicDamage(int dmg);
+        virtual void addHP(int hp);
 
         virtual void attack(Unit* enemy) = 0;
         virtual void counterAttack(Unit* enemy) = 0;

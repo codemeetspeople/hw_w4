@@ -27,6 +27,14 @@ void Unit::takeDamage(int dmg) {
     this->state->takeDamage(dmg);
 }
 
+void Unit::takeMagicDamage(int dmg) {
+    this->state->takeDamage(dmg);
+}
+
+void Unit::addHP(int hp) {
+    this->state->addHP(hp);
+}
+
 std::ostream& operator<<(std::ostream& out, const Unit& unit) {
     out << unit.getTitle() << ":" << std::endl;
     out << " - hp(" << unit.getHP() << "/" << unit.getMaxHP() << ")";
