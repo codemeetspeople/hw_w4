@@ -1,8 +1,10 @@
 #include "State.hpp"
 #include "../exceptions/HPException.hpp"
+#include "../exceptions/ManaException.hpp"
 
-State::State(const std::string& title, int maxHP, int dmg)
-     : title(title), hp(maxHP), maxHP(maxHP), dmg(dmg) {}
+State::State(const std::string& title, int maxHP, int dmg, int manaLimit)
+     : title(title), hp(maxHP), maxHP(maxHP), dmg(dmg), manaLimit(manaLimit),
+       mana(manaLimit) {}
 
 State::~State() {}
 
@@ -22,6 +24,14 @@ int State::getDmg() const {
     return this->dmg;
 }
 
+int State::getMana() const {
+    return this->mana;
+}
+
+int State::getManaLimit() const {
+    return this->manaLimit;
+}
+
 void State::takeDamage(int dmg) {
     if ( this->getHP() == 0 ) {
         throw HPException();
@@ -31,4 +41,11 @@ void State::takeDamage(int dmg) {
         return;
     }
     this->hp -= dmg;
+}
+
+void State::spendMana(int cost) {
+    if ( cost > this->getMana() ) {
+        throw ManaException();
+    }
+    this->mana -= cost;
 }

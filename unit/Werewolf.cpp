@@ -1,9 +1,9 @@
 #include "Werewolf.hpp"
 
-Werewolf::Werewolf(const std::string& title, int maxHP, int dmg)
-        : Soldier(title, maxHP, dmg)
+Werewolf::Werewolf(const std::string& title, int maxHP, int dmg, int manaLimit)
+        : Soldier(title, maxHP, dmg, manaLimit)
 {
-    this->altState = new State("Werewolf (wolf)", 150, 25);
+    this->altState = new State("Werewolf (wolf)", 150, 25, 0);
 }
 
 Werewolf::~Werewolf() {

@@ -7,7 +7,12 @@
 
 class Rogue : public Unit {
     public:
-        Rogue(const std::string& title="Rogue", int maxHP=90, int dmg=30);
+        Rogue(
+            const std::string& title = "Rogue",
+            int maxHP = 90,
+            int dmg = 30,
+            int manaLimit = 0
+        );
         virtual ~Rogue();
 
         virtual void attack(Unit* enemy);

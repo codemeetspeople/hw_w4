@@ -1,7 +1,7 @@
 #include "Rogue.hpp"
 
-Rogue::Rogue(const std::string& title, int maxHP, int dmg)
-       : Unit(title, maxHP, dmg) {}
+Rogue::Rogue(const std::string& title, int maxHP, int dmg, int manaLimit)
+       : Unit(title, maxHP, dmg, manaLimit) {}
 
 Rogue::~Rogue() {}
 

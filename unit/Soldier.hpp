@@ -7,7 +7,12 @@
 
 class Soldier : public Unit {
     public:
-        Soldier(const std::string& title="Soldier", int maxHP=120, int dmg=20);
+        Soldier(
+            const std::string& title = "Soldier",
+            int maxHP = 120,
+            int dmg = 20,
+            int manaLimit = 0
+        );
         virtual ~Soldier();
 
         virtual void attack(Unit* enemy);

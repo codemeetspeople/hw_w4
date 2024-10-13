@@ -1,7 +1,7 @@
 #include "Unit.hpp"
 
-Unit::Unit(const std::string& title, int maxHP, int dmg) {
-    this->state = new State(title, maxHP, dmg);
+Unit::Unit(const std::string& title, int maxHP, int dmg, int manaLimit) {
+    this->state = new State(title, maxHP, dmg, manaLimit);
 }
 Unit::~Unit() {
     delete(this->state);

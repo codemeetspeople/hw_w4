@@ -10,7 +10,7 @@ class Unit {
         State* state;
 
     public:
-        Unit(const std::string& title, int maxHP, int dmg);
+        Unit(const std::string& title, int maxHP, int dmg, int manaLimit);
         virtual ~Unit();
 
         virtual const std::string& getTitle() const;

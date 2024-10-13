@@ -9,7 +9,12 @@ class Werewolf : public Soldier {
         State* altState;
     
     public:
-        Werewolf(const std::string& title = "Werewolf (human)", int maxHP = 100, int dmg = 15);
+        Werewolf(
+            const std::string& title = "Werewolf (human)",
+            int maxHP = 100,
+            int dmg = 15,
+            int manaLimit = 0
+        );
         virtual ~Werewolf();
         virtual void transform();
 };

@@ -1,7 +1,7 @@
 #include "Soldier.hpp"
 
-Soldier::Soldier(const std::string& title, int maxHP, int dmg)
-       : Unit(title, maxHP, dmg) {}
+Soldier::Soldier(const std::string& title, int maxHP, int dmg, int manaLimit)
+       : Unit(title, maxHP, dmg, manaLimit) {}
 
 Soldier::~Soldier() {}
 
