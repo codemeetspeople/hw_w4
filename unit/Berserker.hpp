@@ -17,6 +17,4 @@ class Berserker : public Soldier {
         virtual void takeMagicDamage(int dmg);
 };
 
-
-
 #endif
